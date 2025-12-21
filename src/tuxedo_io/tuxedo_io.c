@@ -159,8 +159,10 @@ static int tdp_max_x6ar5xx[] = { 0xd2, 0xd2, 0x1a4 };
 static int tdp_min_x6fr5xx[] = { 0x19, 0x19, 0x19 };
 static int tdp_max_x6fr5xx[] = { 0xa2, 0xa2, 0xc3 };
 //GAME GARAJ SLAYER R9T 894X HX 5060
-static int tdp_min_x6fr57tk[] = { 0x0a, 0x14, 0x19 }; //10, 20 ,25   default 10, 10, 10,
-static int tdp_max_x6fr57tk[] = { 0x3C, 0x64, 0x64 }; //60, 100, 100  default 145, 145, 167
+//X6DR556K -> 894X 5060
+//x6fr57tk -> 995X 5070TI
+static int tdp_min_x6dr556k[] = { 0x0a, 0x14, 0x19 }; //10, 20 ,25   default 10, 10, 10,
+static int tdp_max_x6dr556k[] = { 0x3C, 0x64, 0x64 }; //60, 100, 100  default 145, 145, 167
 
 static int tdp_min_xxxx45xs[] = { 0x0a, 0x0a, 0x0a };
 static int tdp_max_xxxx45xs[] = { 0x64, 0x64, 0x69 };
@@ -249,8 +251,8 @@ static void uw_id_tdp(void)
 		tdp_min_defs = tdp_min_x6fr5xx;
 		tdp_max_defs = tdp_max_x6fr5xx;
 	} else if (dmi_match(DMI_PRODUCT_SKU, "R9T V1")) {
-		tdp_min_defs = tdp_min_x6fr57tk;
-		tdp_max_defs = tdp_max_x6fr57tk;	
+		tdp_min_defs = tdp_min_x6dr556k;
+		tdp_max_defs = tdp_max_x6dr556k;	
 	} else if (dmi_match(DMI_BOARD_NAME, "X5KK45xS_X5SP45xS")) {
 		tdp_min_defs = tdp_min_xxxx45xs;
 		tdp_max_defs = tdp_max_xxxx45xs;
