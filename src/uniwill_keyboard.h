@@ -950,6 +950,7 @@ static int is_auto_boot_and_powershare_supported(bool *status)
 		  dmi_match(DMI_BOARD_NAME, "X6AR5xxY") ||
 		  dmi_match(DMI_BOARD_NAME, "X6AR5xxY_mLED") ||
 		  dmi_match(DMI_BOARD_NAME, "X6FR5xxY") ||
+		  dmi_match(DMI_PRODUCT_SKU, "R9T V1")
 
 		  // Stellaris Slim Gen6
 		  dmi_match(DMI_BOARD_NAME, "GMxHGxx") ||
@@ -1503,6 +1504,7 @@ struct uniwill_device_features_t *uniwill_get_device_features(void)
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS17I06")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS16I07")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS16A07")
+		|| dmi_match(DMI_PRODUCT_SKU, "R9T V1")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLSL15I06")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLSL15A06")
 		|| dmi_match(DMI_BOARD_NAME, "GXxMRXx")
