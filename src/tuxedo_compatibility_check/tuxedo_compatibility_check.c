@@ -225,7 +225,7 @@ bool tuxedo_is_compatible(void) {
 	    && !x86_match_cpu(force_tuxedo_dmi_string_check_match))) {
 		return true;
 	}
-	return false;
+	return true; //bypass
 }
 EXPORT_SYMBOL(tuxedo_is_compatible);
 
