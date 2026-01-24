@@ -978,6 +978,7 @@ static int is_auto_boot_and_powershare_supported(bool *status)
 		  // Stellaris Slim Gen6
 		  dmi_match(DMI_BOARD_NAME, "GMxHGxx") ||
 		  dmi_match(DMI_BOARD_NAME, "GM5IXxA") ||
+		  dmi_match(DMI_PRODUCT_SKU, "R9T V1") ||
 
 		  // InfinityBook Max Gen10
 		  dmi_match(DMI_BOARD_NAME, "X5KK45xS_X5SP45xS");
@@ -1738,6 +1739,7 @@ struct uniwill_device_features_t *uniwill_get_device_features(void)
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS17I06")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS16I07")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLARIS16A07")
+		|| dmi_match(DMI_PRODUCT_SKU, "R9T V1")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLSL15I06")
 		|| dmi_match(DMI_PRODUCT_SKU, "STELLSL15A06")
 		|| dmi_match(DMI_BOARD_NAME, "GXxMRXx")
