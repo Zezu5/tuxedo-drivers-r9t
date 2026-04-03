@@ -785,10 +785,37 @@ static ssize_t buffer_input_store(struct device *device,
 	return size;
 }
 
+static ssize_t animation_control_store(struct device *device,
+				     struct device_attribute *attr,
+				     const char *buf,
+				     size_t size)
+{
+	struct hid_device *hdev;
+	u8 ctrl_data[8] = {0};
+	int count;
+
+	hdev = container_of(device, struct hid_device, dev);
+
+	// Parse space-separated hex bytes
+	count = sscanf(buf, "%hhx %hhx %hhx %hhx %hhx %hhx %hhx %hhx",
+		       &ctrl_data[0], &ctrl_data[1], &ctrl_data[2], &ctrl_data[3],
+		       &ctrl_data[4], &ctrl_data[5], &ctrl_data[6], &ctrl_data[7]);
+
+	if (count != 8)
+		return -EINVAL;
+
+	ite8291_write_control(hdev, ctrl_data);
+
+	return size;
+}
+
 DEVICE_ATTR_RW(buffer_input);
+
+DEVICE_ATTR_WO(animation_control);
 
 static struct attribute *control_group_attrs[] = {
 	&dev_attr_buffer_input.attr,
+	&dev_attr_animation_control.attr,
 	NULL
 };
 
