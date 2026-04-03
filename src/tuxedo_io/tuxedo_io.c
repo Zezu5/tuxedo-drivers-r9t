@@ -159,7 +159,7 @@ static int tdp_max_x6ar5xx[] = { 0xd2, 0xd2, 0x1a4 };
 static int tdp_min_x6fr5xx[] = { 0x19, 0x19, 0x19 };
 static int tdp_max_x6fr5xx[] = { 0xa2, 0xa2, 0xc3 };
 
-static int tdp_min_x6dr5xx[] = { 0x14, 0x14, 0x19 }; //20, 20 ,25   default 10, 10, 10,
+static int tdp_min_x6dr5xx[] = { 0x19, 0x19, 0x19 }; //25, 25 ,25   default 10, 10, 10,
 static int tdp_max_x6dr5xx[] = { 0x3C, 0x64, 0x64 }; //60, 100, 100  default 145, 145, 167
 
 static int tdp_min_xxxx45xs[] = { 0x0a, 0x0a, 0x0a };
